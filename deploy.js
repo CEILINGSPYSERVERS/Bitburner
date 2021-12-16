@@ -1,5 +1,6 @@
 /** @param {import(".").NS } ns */
 export async function main(ns) {
+    var target = ns.args[0];
     ns.connect(target)
     if (ns.fileExists("test.js", target)) {
         ns.run(test.js, 1, (target));
