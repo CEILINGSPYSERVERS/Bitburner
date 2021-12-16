@@ -4,7 +4,8 @@ export async function main(ns) {
     var local = ns.getHostname
     let targets = ["harakiri-sushi", "hong-fang-tea", "joesguns", "sigma-cosmetics", "foodnstuff", "n00dles"]
     var arraylen = targets.length
-    if (!ns.fileExists("steal.js", local)) {
+    if (ns.fileExists("steal.js", local)) {
+    } else {
         ns.wget("https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/steal.js", steal.js)
     }
     for (var i = 0; i < arraylen; i++) {
