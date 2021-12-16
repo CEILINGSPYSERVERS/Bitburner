@@ -5,7 +5,10 @@ export async function main(ns) {
         ns.brutessh(target);
     }
     if (ns.fileExists("ftpcrack.exe", "home")) {
-        ns.brutessh(target);
+        ns.ftpcrack(target);
+    }
+    if (ns.fileExists("relaysmtp.exe", "home")) {
+        ns.relaysmtp(target);
     }
     ns.nuke(target);
 }
