@@ -10,5 +10,11 @@ export async function main(ns) {
     if (ns.fileExists("relaysmtp.exe", "home")) {
         ns.relaysmtp(target)
     }
+    if (ns.fileExists("httpworm.exe", "home")) {
+        ns.httpworm(target)
+    }
+    if (ns.fileExists("sqlinject.exe", "home")) {
+        ns.sqlinject(target)
+    }
     ns.nuke(target)
 }
