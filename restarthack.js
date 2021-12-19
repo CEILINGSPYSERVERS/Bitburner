@@ -9,8 +9,9 @@ export async function main(ns) {
     let ports4 = ["aevum-police","alpha-ent","syscore","lexo-corp","snap-fitness","global-pharm","applied-energetics","unitalife","univ-energy","nova-med","zb-def","run4theh111z","."]
     let ports5 = ["zb-institute","vitalife","titan-labs","solaris","microdyne","helios","deltaone","icarus","zeus-med","omnia","defcomm","galactic-cyber","infocomm","taiyang-digital","stormtech","aerocorp","clarkinc","omnitek","nwo","4sigma","blade","b-and-a","ecorp","fulcrumtech","megacorp","kuai-gong","fulcrumassets","powerhouse-fitness"]
 
-    for (let i = 0; i < eval("ports"+port+".length"); i++) {
+    for (let i = 0; i <= eval("ports"+port+".length()"); i++) {
         ns.run("hack.js", 1, eval("ports"+port+"["+i+"]"))
+        ns.tprint("Hacking "+eval("ports"+port+"["+i+"]"))
         await ns.sleep(20)
     }
 }
