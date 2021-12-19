@@ -11,5 +11,6 @@ export async function main(ns) {
 
     for (let i = 0; i < eval("ports"+port+".length"); i++) {
         ns.run("hack.js", 1, eval("ports"+port+"["+i+"]"))
+        await ns.sleep(20)
     }
 }
