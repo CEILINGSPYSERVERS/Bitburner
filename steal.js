@@ -12,6 +12,5 @@ export async function main(ns) {
         } else {
             await ns.hack(target)
         }
-        ns.tprint("-------------------")
     }
 }
