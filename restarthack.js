@@ -13,16 +13,3 @@ export async function main(ns) {
         ns.run("hack.js", 1, eval("ports"+port+"["+i+"]"))
     }
 }
-
-
-    /**
-    array0len = ports0.length
-    array1len = ports1.length
-    array2len = ports2.length
-    array3len = ports3.length
-    array4len = ports4.length
-    array5len = ports5.length
-    for (i = 0; i < array0len; i++) {
-        ns.run("hack.js", 1, ports0[i])
-    }
-    */
