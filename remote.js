@@ -6,7 +6,7 @@ export async function main(ns) {
     let ramreq = ns.getScriptRam("steal.js", target)
     let maxram = ns.getServerMaxRam(target)
     let ramused = ns.getServerUsedRam(target)
-    let freeram = maxram - freeram
+    let freeram = maxram - ramused
     let threads = freeram / ramreq
     ns.run("steal.js", threads, target)
 }
