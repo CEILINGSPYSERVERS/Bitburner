@@ -6,9 +6,7 @@ export async function main(ns) {
     var arraylen = targets.length
     for (var i = 0; i < arraylen; i++) {
         ns.run("connect.js", 1, targets[i])
-        if (!ns.fileExists("remote.js", targets[i])) {
-            await ns.wget("https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/remote.js", "remote.js")
-        }
+        await ns.wget("https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/remote.js", "remote.js")
         ns.run("remote.js", 1, targets[i])
     }
 }
