@@ -1,4 +1,5 @@
 //https://www.reddit.com/r/Bitburner/comments/rhpp8p/scan_script_updated_for_bitburner_v110/
+//wget https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/connect.js connect.js
 /** @param {import(".").NS } ns */
 export async function main(ns) {
     let target = ns.args[0];
