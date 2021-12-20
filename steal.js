@@ -9,6 +9,8 @@ export async function main(ns) {
             await ns.weaken(target)
         } else if (ns.getServerMoneyAvailable(target) < moneyThresh) {
             await ns.grow(target)
+        } else if (ns.getServerRequiredHackingLevel(target) > ns.getHackingLevel()) {
+            await ns.grow(target)
         } else {
             await ns.hack(target)
         }
