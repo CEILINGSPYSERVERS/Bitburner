@@ -23,4 +23,5 @@ export async function main(ns) {
         ns.tprint("SQLInject "+target)
     }
     ns.nuke(target)
+    ns.tprint("Nuked "+target)
 }
