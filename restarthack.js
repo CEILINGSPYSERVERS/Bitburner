@@ -1,6 +1,7 @@
 //wget https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/restarthack.js restarthack.js
 /** @param {import(".").NS } ns */
 export async function main(ns) {
+    ns.killall
     let port = ns.args[0]
     let ports = []
     ports[0] = ["n00dles","foodnstuff","sigma-cosmetics","joesguns","nectar-net","hong-fang-tea","harakiri-sushi"]
