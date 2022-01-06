@@ -73,7 +73,7 @@ export async function main(ns) {
         }
         
         // And sleep for a bit
-        await ns.sleep(purchased ? 2000 : 30000);
+        await ns.sleep(purchased ? 800 : 5000);
     }
 }
 
