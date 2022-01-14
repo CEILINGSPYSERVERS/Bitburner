@@ -2,8 +2,14 @@
 /** @param {import(".").NS } ns */
 export async function main(ns) {
     ns.killall
-    let port = ns.args[0]
+    let port = 0
     let ports = []
+    let programs = ["brutessh", "ftpcrack", "relaysmtp", "httpworm", "sqlinject"]
+    for (let i = 0; i < 5; i++) {
+        if (ns.fileExists(files[i], "home")) {
+            port += 1
+        }
+    }
     ports[0] = ["n00dles","foodnstuff","sigma-cosmetics","joesguns","nectar-net","hong-fang-tea","harakiri-sushi"]
     ports[1] = ["neo-net","zer0","max-hardware","iron-gym","CSEC","neo-net"]
     ports[2] = ["phantasy","silver-helix","omega-net","crush-fitness","johnson-ortho","the-hub","avmnite-02h"]
