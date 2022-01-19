@@ -5,8 +5,8 @@ export async function main(ns) {
 	let cost = ns.getPurchasedServerCost(ram)
 	let money = ns.getServerMoneyAvailable("home")
 	if (money <= cost) {
-        ns.tprint("Not enough money to buy "+ram+" GB Server")
-    } else {
-        ns.purchaseServer("S", ram)
-    }
+		ns.tprint("Not enough money to buy " + ram + " GB Server")
+	} else {
+		ns.purchaseServer("S", ram)
+	}
 }

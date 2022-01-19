@@ -6,7 +6,7 @@ export async function main(ns) {
     await ns.wget("https://raw.githubusercontent.com/CEILINGSPYSERVERS/Bitburner/main/steal.js", "steal.js")
     let m1 = ns.getServerMaxRam(host) - ns.getServerUsedRam(host)
     let m2 = m1 / ns.getScriptRam("steal.js", host)
-    let threads = 0|m2
-    ns.tprint("Running steal.js on "+threads+" threads.")
+    let threads = 0 | m2
+    ns.tprint("Running steal.js on " + threads + " threads.")
     ns.run("steal.js", threads, target)
 }

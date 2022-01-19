@@ -6,7 +6,7 @@ export async function main(ns) {
     var numLevels = 10;
     // How much money to keep around for buying upgrades, etc.
     // Start with current player amount.  Will grow over time with each purchase.
-    var minMoney = ns.getPlayer().money;
+    var minMoney = ns.args[0] * 1000000;
 
     // Setup
     var cost, purchased, usableMoney;
@@ -26,7 +26,7 @@ export async function main(ns) {
             ns.toast('HackNet node purchased: $' + format(nodeCost));
             minMoney += nodeCost / 2;
             purchased = true;
-            
+
         } else {
             // Find cheapest upgrade of each type
             var minCost = Infinity;
@@ -56,7 +56,7 @@ export async function main(ns) {
                     type = 'cpu';
                 }
             }
-            
+
             if (type && minCost < usableMoney) {
                 // Have something to buy!
                 if (type == 'ram') {
@@ -71,7 +71,7 @@ export async function main(ns) {
                 purchased = true;
             }
         }
-        
+
         // And sleep for a bit
         await ns.sleep(purchased ? 800 : 5000);
     }

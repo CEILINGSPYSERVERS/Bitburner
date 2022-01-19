@@ -7,20 +7,20 @@ export async function main(ns) {
     let arraylen = files.length
     for (let i = 0; i < arraylen; i++) {
         if (ns.fileExists(files[i], "home")) {
-            if (i == 0){
+            if (i == 0) {
                 await ns.brutessh(target)
-            } else if (i == 1){
+            } else if (i == 1) {
                 await ns.ftpcrack(target)
-            } else if (i == 2){
+            } else if (i == 2) {
                 await ns.relaysmtp(target)
-            } else if (i == 3){
+            } else if (i == 3) {
                 await ns.httpworm(target)
             } else {
                 await ns.sqlinject(target)
             }
-            ns.tprint(programs[i]+" "+target)
+            ns.tprint(programs[i] + " " + target)
         }
     }
     ns.nuke(target)
-    ns.tprint("Nuked "+target)
+    ns.tprint("Nuked " + target)
 }

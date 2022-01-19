@@ -17,17 +17,17 @@ export async function main(ns) {
                 paths[newSv] = `${path},${newSv}`;
                 if (newSv == target)
                     pathToTarget = paths[newSv].substr(1).split(",");
-                    
+
             }
         }
     }
     output = "home; ";
 
-    pathToTarget.forEach(server=> output += " connect " + server + ";");
+    pathToTarget.forEach(server => output += " connect " + server + ";");
 
     const terminalInput = document.getElementById("terminal-input");
-    terminalInput.value=output;
+    terminalInput.value = output;
     const handler = Object.keys(terminalInput)[1];
-    terminalInput[handler].onChange({target:terminalInput});
-    terminalInput[handler].onKeyDown({keyCode:13,preventDefault:()=>null});
+    terminalInput[handler].onChange({ target: terminalInput });
+    terminalInput[handler].onKeyDown({ keyCode: 13, preventDefault: () => null });
 }
