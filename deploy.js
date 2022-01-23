@@ -15,5 +15,5 @@ export async function main(ns) {
     ns.tprint("Running dohack.js on " + threads3 + " threads.")
     ns.run("weaken.js", threads2, target)
     ns.run("grow.js", threads2, target)
-    ns.run("dohack.js", threads2, target)
+    ns.run("dohack.js", threads3, target)
 }
