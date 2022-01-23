@@ -11,7 +11,7 @@ export async function main(ns) {
     ports[4] = ["aevum-police", "alpha-ent", "syscore", "lexo-corp", "snap-fitness", "global-pharm", "applied-energetics", "unitalife", "univ-energy", "nova-med", "zb-def", "run4theh111z", "."]
     ports[5] = ["zb-institute", "vitalife", "titan-labs", "solaris", "microdyne", "helios", "deltaone", "icarus", "zeus-med", "omnia", "defcomm", "galactic-cyber", "infocomm", "taiyang-digital", "stormtech", "aerocorp", "clarkinc", "omnitek", "nwo", "4sigma", "blade", "b-and-a", "ecorp", "fulcrumtech", "megacorp", "kuai-gong", "fulcrumassets", "powerhouse-fitness"]
 
-    if (ns.getScriptRam("hack.js") > freeram) {
+    if (ns.getScriptRam("hack.js") < freeram) {
         for (let k = 0; k < files.length; k++) {
             if (ns.fileExists(files[k], "home")) {
                 for (let i = 0; i < ports[k].length; i++) {
